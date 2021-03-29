@@ -1,0 +1,11 @@
+#mainblock {
+  opacity: 0.6;
+}
+
+#mainblock:hover {
+  opacity: inherit;
+}
+
+#mainblock:focus {
+  opacity: inherit;
+}

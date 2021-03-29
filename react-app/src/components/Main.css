@@ -181,6 +181,7 @@
 .block_about_us {
   height: 100%;
   width: 100%;
+  padding-bottom: 80px;
   font-family: "Playfair Display", serif;
   background: #000000;
   color: #ffffff;
@@ -203,36 +204,17 @@
   display: flex;
 }
 
-.col-md-6 > .btn {
-  margin-top: 26px;
-  width: 151px;
-  height: 38px;
-  transition: 1.4s;
-  color: #ffffff;
-  border: 1px solid #fff;
+.link {
+  text-decoration: none;
 }
 
-.col-md-6 > .btn:hover {
-  transition: 1.4s;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  border: 1px solid rgb(54, 51, 51);
+.link:hover {
+  text-decoration: none;
 }
+
 /* END block_about_us */
 
 /* footer */
-
-.Main > footer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #588b9b;
-  color: #ffffff;
-}
-
-.col-md-3 > h4 {
-  margin-top: 60px;
-}
 
 .col-md-3 > p {
   color: #e0e0e0;
@@ -293,15 +275,6 @@
 
 /* END MEDIA */
 
-
-
-
-
-
-
-
-
-
-.icons{
-margin-top: 20px;
+.icons {
+  margin-top: 20px;
 }

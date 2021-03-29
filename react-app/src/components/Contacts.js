@@ -1,7 +1,6 @@
 import React from "react";
 import "../components/Contacts.css";
 import "../components/Media.css";
-import Footer from "../components/Footer";
 
 export default function Contact() {
     return (
@@ -28,7 +27,6 @@ export default function Contact() {
                     </div>
                 </div>
             </section>
-            <Footer />
         </div>
     );
 }

@@ -1,205 +1,98 @@
 import React from "react";
 import "../components/Info.css";
 import "../components/Media.css";
-import Footer from "../components/Footer";
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import { blue, red } from '@material-ui/core/colors';
-import Screenshot_1 from "../images/Screenshot_1.png";
-
-
-// CARD
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 345,
-    marginTop: 50,
-  },
-  media: {
-    height: 312,
-    paddingTop: '56.25%', // 16:9
-  },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
-  name: {
-    color: "black",
-    textAlign: "center",
-  },
-  name1: {
-    color: "black",
-    textAlign: "center",
-  },
-  name2: {
-    color: "black",
-    textAlign: "center",
-  },
-}));
+import CardsInfo from "../components/CardsInfo";
 
 const eventsData = [
   {
-    id: 0,
+    id: 1,
     image: "http://lfkhp.com.ua/wp-content/uploads/2020/10/Betsa-web.jpg",
-    description:
-      "Беца Ірина Миколаївна"
+    title: "викладач вищої категорії",
+    description: "Беца Ірина Миколаївна",
+    typ:
+      "Дрогобицький державний педагогічний університет імені І.Франка. Математик-програміст, викладач інформатики (2005р.). Львівський національний університет ім. І.Франка. Магістр інформатики, викладач інформатики (2012р.). Національний університет «Львівська політехніка». Магістр з управління навчальним закладом (2012р.)",
+    stan: "14 років",
+    object:
+      "«Розробка клієнт-серверних застосувань», «Інформатика», «Інформатика і комп’ютерна техніка», «Комп’ютерна техніка», «Операційні системи», «Чисельні методи», «WEB-технології та WEB-дизайн»",
   },
   {
-    id: 1,
+    id: 2,
     image: "http://lfkhp.com.ua/wp-content/uploads/2020/10/Grytsak-web.jpg",
-    description: "Грицак Володимир Андрійович"
+    description: "Грицак Володимир Андрійович",
+    title: "викладач І категорії",
+    typ:
+      "Національний університет «Львівська політехніка». Магістр з комп’ютерних наук (2010р.)",
+    stan: "8 років",
+    object:
+      " «Комп’ютерна техніка», «Технологія створення програмних продуктів», «Алгоритмізація та програмування», «Теорія алгоритмів», «Комп’ютерна графіка», «Об’єктно-орієнтоване програмування», «Технології захисту інформації», «Вступ до фаху",
   },
-];
-const eventsData2 = [
   {
-    id: 0,
+    id: 3,
     image: "http://lfkhp.com.ua/wp-content/uploads/2020/10/Zaharyak-web.jpg",
-    description:
-      "Захаряк Оксана Іванівна"
+    description: "Захаряк Оксана Іванівна",
+    title: "викладач вищої категорії",
+    typ:
+      "Дрогобицький державний педагогічний університет імені І.Франка. Вчитель математики, інформатики і обчислювальної техніки (1993 р.)",
+    stan: "27 років",
+    object:
+      "«Організація баз даних і знань», «Тестування програмних систем і комплексів», «Інформатика», «Інформатика і комп’ютерна техніка».",
   },
   {
-    id: 1,
+    id: 4,
     image: "http://lfkhp.com.ua/wp-content/uploads/2020/10/Marton-web.jpg",
-    description: "Мартон Олег Володимирович"
+    description: "Мартон Олег Володимирович",
+    title: "викладач І категорії",
+    typ:
+      "Національний університет «Львівська політехніка». Економіст (2007 р.)",
+    stan: "11 років",
+    object:
+      "«Бухоблік», «Адміністрування програмних систем і комплексів», «Інформатика і комп’ютерна техніка», «Комп’ютерна техніка», «Інформаційні системи і технології в обліку».",
   },
-
-];
-const eventsData3 = [
   {
-    id: 0,
+    id: 5,
     image: "http://lfkhp.com.ua/wp-content/uploads/2020/10/Mysholivska-web.jpg",
-    description:
-      "Мишолівська Марта Василівна"
+    description: "Мишолівська Марта Василівна",
+    title: "викладач І категорії",
+    typ:
+      "Національний університет харчових технологій. Спеціаліст з обліку і аудиту (2005 р.). Психолого-педагогічне відділення Дослідницького Центру МОН при НУ «Львівська політехніка». Викладач інформатики (2009 р.).",
+    stan: "13 років",
+    object:
+      "«Інформатика і комп’ютерна техніка», «Інформатика», «Комп’ютерна техніка». ",
   },
   {
-    id: 1,
+    id: 6,
     image: "http://lfkhp.com.ua/wp-content/uploads/2020/10/Popovych-web.jpg",
-    description: "Попович Орест Петрович"
+    description: "Попович Орест Петрович",
+    title: "спеціаліст",
+    typ: "Львівський державний університет ім.І.Франка. Математик (1991 р.)",
+    stan: "-",
+    object:
+      "«Інформатика», «Інформатика і комп’ютерна техніка», «WEB-технології та WEB-дизайн».",
   },
-
 ];
 
-export default function Info({ id, image, title, location, description, avatar, paragraph }) {
-
-  const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
-  const eventsList = eventsData.map(({ id, image, title, location, description, avatar, paragraph }, index) => (
-    <Card
-      key={index}
-      id={id}
-      avatar={avatar}
-      paragraph={paragraph}
-      image={image}
-      title={title}
-      location={location}
-      description={description}
-      className={classes.root}
-    >
-      <CardMedia
-        className={classes.media}
-        image={image}
-        title="Викладачі"
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          <p className={classes.name}>
-            {description}
-          </p>
-        </Typography>
-      </CardContent>
-    </Card>
-  ));
-
-  const eventsList2 = eventsData2.map(({ id, image, title, location, description, avatar, paragraph }, index) => (
-    <Card
-      key={index}
-      id={id}
-      avatar={avatar}
-      paragraph={paragraph}
-      image={image}
-      title={title}
-      location={location}
-      description={description}
-      className={classes.root}
-    >
-      <CardMedia
-        className={classes.media}
-        image={image}
-        title="Викладачі"
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          <p className={classes.name1}>
-            {description}
-          </p>
-        </Typography>
-      </CardContent>
-    </Card>
-  ));
-  const eventsList3 = eventsData3.map(({ id, image, title, location, description, avatar, paragraph }, index) => (
-    <Card
-      key={index}
-      id={id}
-      avatar={avatar}
-      paragraph={paragraph}
-      image={image}
-      title={title}
-      location={location}
-      description={description}
-      className={classes.root}
-    >
-      <CardMedia
-        className={classes.media}
-        image={image}
-        title="Викладачі"
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          <p className={classes.name2}>
-            {description}
-          </p>
-        </Typography>
-      </CardContent>
-    </Card>
-  ));
-
+export default function Info() {
   return (
     <div className="Info">
       <section>
         <div className="container">
           <div className="row mb-4">
-            <div className="col-md-4">
-              {eventsList}
-            </div>
-            <div className="col-md-4">
-              {eventsList2}
-            </div>
-            <div className="col-md-4">
-              {eventsList3}
-            </div>
+            {eventsData.map((item) => (
+              <div className="col-md-4">
+                <CardsInfo
+                  key={item.id}
+                  image={item.image}
+                  description={item.description}
+                  typ={item.typ}
+                  stan={item.stan}
+                  object={item.object}
+                  title={item.title}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }

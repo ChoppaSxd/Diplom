@@ -8,6 +8,10 @@
   margin-bottom: 40px;
 }
 
+.Title_Foto_Galery {
+  text-align: start;
+}
+
 .block_one {
   height: 100%;
   width: 100%;
@@ -109,7 +113,7 @@ p {
   position: relative;
   display: block;
   width: 100%;
-  height: 300px;
+  height: 600px;
   overflow: hidden;
 }
 

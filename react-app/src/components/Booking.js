@@ -1,7 +1,6 @@
 import React from "react";
 import "../components/Booking.css";
 import "../components/Media.css";
-import Footer from "../components/Footer";
 
 export default function Booking() {
     return(
@@ -72,7 +71,6 @@ export default function Booking() {
                     </div>
                 </div>
             </section>
-            <Footer />
         </div> 
     );
 }

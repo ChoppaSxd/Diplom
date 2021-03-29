@@ -1,0 +1,17 @@
+#icon:hover {
+  transition: 1.4s;
+  color: aqua;
+}
+
+#gallary {
+  filter: brightness(90%);
+  cursor: pointer;
+  transition: 0.4s;
+  z-index: 0;
+}
+
+#gallary:focus {
+  transition: 0.4s;
+  zoom: 1.2;
+  z-index: 1;
+}

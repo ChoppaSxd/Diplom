@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../components/Corporate.css";
 import "../components/Media.css";
-import Footer from "../components/Footer";
 import fotos_corporate_1 from "../images/fotos_corporate_1.jpg";
 import fotos_corporate_2 from "../images/fotos_corporate_2.jpg";
 
@@ -48,7 +47,6 @@ export default function Corporate() {
                     </div>
                 </div>
             </section>
-            <Footer />
         </div>
     );
 }
