@@ -59,3 +59,8 @@ html {
   margin-top: 100px;
   margin-bottom: 40px;
 }
+
+.novisible{
+  width: 100%;
+  height: 150px;
+}

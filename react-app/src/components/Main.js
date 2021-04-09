@@ -90,18 +90,17 @@ export default function Main() {
                 <div className="card border_cards">
                   <div className="face face1">
                     <div className="content">
-                      <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true" />
-                      <h3>Design</h3>
+                      <img src="https://www.daliform.com/wp-content/uploads/2020/05/img-book.png" />
+                      <h3>Бібліотека</h3>
                     </div>
                   </div>
                   <div className="face face2">
                     <div className="content">
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quas cum cumque minus iste veritatis provident at.
+                        Електронна біоліотека
                       </p>
-                      <Nav.Link target="_blank" href="#">
-                        Read More
+                      <Nav.Link target="_blank" href="http://www.elib-lcnuht.lviv.ua/">
+                        Перейти
                       </Nav.Link>
                     </div>
                   </div>
@@ -112,7 +111,7 @@ export default function Main() {
                   <div className="face face1">
                     <div className="content">
                       <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true" />
-                      <h3>Code</h3>
+                      <h3>Тести</h3>
                     </div>
                   </div>
                   <div className="face face2">
@@ -122,7 +121,7 @@ export default function Main() {
                         href="http://tvoemisto.tv/news/u_lvovi_vidkryvaietsya_ofis_itkompanii_intetics_yaki_vakansii_proponuyut_test_92401.html"
                         target="_blank"
                       >
-                        Read More
+                        Перейти
                       </Nav.Link>
                     </div>
                   </div>
@@ -132,18 +131,17 @@ export default function Main() {
                 <div className="card border_cards">
                   <div className="face face1">
                     <div className="content">
-                      <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true" />
-                      <h3>Launch</h3>
+                      <img src="https://www.daliform.com/wp-content/uploads/2020/05/img-software.png" />
+                      <h3>Курси</h3>
                     </div>
                   </div>
                   <div className="face face2">
                     <div className="content">
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quas cum cumque minus iste veritatis provident at.
+                        Основи програмування курси
                       </p>
-                      <Nav.Link target="_blank" href="#">
-                        Read More
+                      <Nav.Link target="_blank" href="https://courses.prometheus.org.ua/courses/KPI/Programming101/2015_T1/about">
+                        Перейти
                       </Nav.Link>
                     </div>
                   </div>
@@ -153,18 +151,17 @@ export default function Main() {
                 <div className="card border_cards">
                   <div className="face face1">
                     <div className="content">
-                      <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true" />
-                      <h3>Launch</h3>
+                      <img src="https://findicons.com/files/icons/1580/devine_icons_part_2/128/home.png" />
+                      <h3>Головна</h3>
                     </div>
                   </div>
                   <div className="face face2">
                     <div className="content">
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quas cum cumque minus iste veritatis provident at.
+                        Головний сайт коледжу
                       </p>
-                      <Nav.Link target="_blank" href="#">
-                        Read More
+                      <Nav.Link target="_blank" href="http://lfkhp.com.ua/">
+                        Перейти
                       </Nav.Link>
                     </div>
                   </div>

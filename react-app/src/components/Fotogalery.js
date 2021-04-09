@@ -43,38 +43,40 @@ export default function Fotogalery() {
                     className="int_slider slide_foto_1"
                     type="radio"
                     name="s"
-                    title="Random Picture 1"
                   />
                   <input
                     className="int_slider slide_foto_2"
                     checked
                     type="radio"
                     name="s"
-                    title="Random Picture 2"
                   />
                   <input
                     className="int_slider slide_foto_3"
                     type="radio"
                     name="s"
-                    title="Random Picture 3"
                   />
                   <input
                     className="int_slider slide_foto_4"
                     type="radio"
                     name="s"
-                    title="Random Picture 4"
                   />
                   <input
                     className="int_slider slide_foto_5"
                     type="radio"
-                    name="s"
-                    title="Random Picture 5"
+                  />
+                  <input
+                    className="int_slider slide_foto_6"
+                    type="radio"
+                  />
+                  <input
+                    className="int_slider slide_foto_7"
+                    type="radio"
                   />
                 </i>
               </div>
             </div>
 
-            <Grid style={{ paddingTop: 120 }} container spacing={4}>
+            {/*             <Grid style={{ paddingTop: 120 }} container spacing={4}>
               <Grid item xs={12} sm={12} md={6} lg={6}>
                 <Paper className={classes.paper}>
                   <h2>Lolololo</h2>
@@ -97,7 +99,7 @@ export default function Fotogalery() {
                   </p>
                 </Paper>
               </Grid>
-            </Grid>
+            </Grid> */}
 
             <div>
               <div style={{ paddingTop: 120 }} className="Title_Foto_Galery">

@@ -132,14 +132,14 @@ export default function Navbars() {
                 </Dropdown>
               </Nav.Link>
             </Nav>
-            <div className="button_booking">
+            {/* <div className="button_booking">
               <Link to="/booking" href="#">
                 <button className="btn btn-outline-light buttons_nav_booking">
                   Бронювати
                 </button>
               </Link>
               <div className="move_circle_1"></div>
-            </div>
+            </div> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

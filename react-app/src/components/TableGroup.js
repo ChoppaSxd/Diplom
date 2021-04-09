@@ -46,33 +46,32 @@ const columns = [
     sortable: false,
     width: 160,
     valueGetter: (params) =>
-      `${params.getValue("firstName") || ""} ${
-        params.getValue("lastName") || ""
+      `${params.getValue("firstName") || ""} ${params.getValue("lastName") || ""
       }`,
   },
 ];
 
 const rows = [
-  { id: 1, lastName: "Гринчак", firstName: "Владислав", age: 35 },
-  { id: 2, lastName: "Доскіч", firstName: "Назар", age: 42 },
-  { id: 3, lastName: "Заканич", firstName: "Ярослав", age: 45 },
-  { id: 4, lastName: "Климус", firstName: "Юрій", age: 16 },
-  { id: 5, lastName: "Кривко", firstName: "Андрій", age: 25 },
-  { id: 6, lastName: "Марущак", firstName: "Микола", age: 150 },
-  { id: 7, lastName: "Мишолівський", firstName: "В’ячеслав", age: 44 },
-  { id: 8, lastName: "Мудрейко", firstName: "Руслан", age: 36 },
-  { id: 9, lastName: "Нартов", firstName: "Данило", age: 65 },
-  { id: 10, lastName: "Паскевич", firstName: "Денис", age: 65 },
-  { id: 11, lastName: "Петруха", firstName: "Михайло", age: 65 },
-  { id: 12, lastName: "Пульс", firstName: "Ростислав", age: 65 },
-  { id: 13, lastName: "Романко", firstName: "Ростислав", age: 65 },
-  { id: 14, lastName: "Синюк", firstName: "Денис", age: 65 },
-  { id: 15, lastName: "Сохан", firstName: "Мирон", age: 65 },
-  { id: 16, lastName: "Сухий", firstName: "Андрій", age: 65 },
-  { id: 17, lastName: "Тригуб", firstName: "Юрій", age: 65 },
-  { id: 18, lastName: "Чайка", firstName: "Роман", age: 65 },
-  { id: 19, lastName: "Швед", firstName: "Святослав", age: 65 },
-  { id: 20, lastName: "Щебововк", firstName: "Юрій", age: 65 },
+  { id: 1, lastName: "Гринчак", firstName: "Владислав", age: 18 },
+  { id: 2, lastName: "Доскіч", firstName: "Назар", age: 19 },
+  { id: 3, lastName: "Заканич", firstName: "Ярослав", age: 19 },
+  { id: 4, lastName: "Климус", firstName: "Юрій", age: 19 },
+  { id: 5, lastName: "Кривко", firstName: "Андрій", age: 19 },
+  { id: 6, lastName: "Марущак", firstName: "Микола", age: 18 },
+  { id: 7, lastName: "Мишолівський", firstName: "В’ячеслав", age: 18 },
+  { id: 8, lastName: "Мудрейко", firstName: "Руслан", age: 18 },
+  { id: 9, lastName: "Нартов", firstName: "Данило", age: 19 },
+  { id: 10, lastName: "Паскевич", firstName: "Денис", age: 18 },
+  { id: 11, lastName: "Петруха", firstName: "Михайло", age: 19 },
+  { id: 12, lastName: "Пульс", firstName: "Ростислав", age: 18 },
+  { id: 13, lastName: "Романко", firstName: "Ростислав", age: 19 },
+  { id: 14, lastName: "Синюк", firstName: "Денис", age: 18 },
+  { id: 15, lastName: "Сохан", firstName: "Мирон", age: 18 },
+  { id: 16, lastName: "Сухий", firstName: "Андрій", age: 19 },
+  { id: 17, lastName: "Тригуб", firstName: "Юрій", age: 18 },
+  { id: 18, lastName: "Чайка", firstName: "Роман", age: 19 },
+  { id: 19, lastName: "Швед", firstName: "Святослав", age: 18 },
+  { id: 20, lastName: "Щебововк", firstName: "Юрій", age: 18 },
 ];
 
 const useStyles = makeStyles((theme) => ({

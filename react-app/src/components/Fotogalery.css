@@ -208,22 +208,30 @@ p {
 }
 
 .slide_foto_1 {
-  background-image: url("https://picsum.photos/500/300?random=1");
+  background-image: url("http://localhost:3000/static/media/ldk.a0a2040e.jpg");
 }
 
 .slide_foto_2 {
-  background-image: url("https://picsum.photos/500/300?random=2");
+  background-image: url("http://lfkhp.com.ua/wp-content/uploads/2020/10/Slide1.jpg");
 }
 
 .slide_foto_3 {
-  background-image: url("https://picsum.photos/500/300?random=3");
+  background-image: url("http://lfkhp.com.ua/wp-content/uploads/2020/10/Slide2.jpg");
 }
 
 .slide_foto_4 {
-  background-image: url("https://picsum.photos/500/300?random=4");
+  background-image: url("http://lfkhp.com.ua/wp-content/uploads/2020/10/Konf9.jpg");
 }
 
 .slide_foto_5 {
-  background-image: url("https://picsum.photos/500/300?random=5");
+  background-image: url("http://lfkhp.com.ua/wp-content/uploads/2020/10/Slide3.jpg");
+}
+
+.slide_foto_6 {
+  background-image: url("http://lfkhp.com.ua/wp-content/uploads/2020/10/Slide5.jpg");
+}
+
+.slide_foto_7 {
+  background-image: url("http://lfkhp.com.ua/wp-content/uploads/2020/10/Slide6.jpg");
 }
 /* END slider */

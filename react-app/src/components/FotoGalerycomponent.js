@@ -26,7 +26,10 @@ import foto7 from "../images/foto7.jpg";
 import foto8 from "../images/foto8.jpg";
 import foto9 from "../images/foto9.jpg";
 import foto10 from "../images/foto10.jpg";
+import foto11 from "../images/vidk1.jpg";
+import foto12 from "../images/vidk2.jpg"
 import { Scrollbars } from "react-custom-scrollbars";
+import { blue } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,22 +61,28 @@ const tileData = [
   {
     img: foto1,
     title: "Image1",
-    author: "author",
+    author: "Admin",
     cols: 2,
     rows: 2,
   },
-  { img: foto2, title: "Image2", author: "author", cols: 1, rows: 2 },
-  { img: foto3, title: "Image3", author: "author", cols: 1, rows: 2 },
-  { img: foto4, title: "Image4", author: "author", cols: 1, rows: 2 },
-  { img: foto5, title: "Image5", author: "author", cols: 1, rows: 2 },
-  { img: foto6, title: "Imag6", author: "author", cols: 1, rows: 2 },
-  { img: foto7, title: "Imag7", author: "author", cols: 2, rows: 2 },
-  { img: foto8, title: "Imag8", author: "author", cols: 1, rows: 3 },
-  { img: foto9, title: "Imag9", author: "author", cols: 1, rows: 3 },
-  { img: foto10, title: "Image10", author: "author", cols: 1, rows: 3 },
+  { img: foto2, title: "Image2", author: "Admin", cols: 1, rows: 2 },
+  { img: foto3, title: "Image3", author: "Admin", cols: 1, rows: 2 },
+  { title: "День відкритих дверей 2019", author: null, cols: 3, rows: 0 },
+  { img: foto4, title: "Image4", author: "Admin", cols: 1, rows: 2 },
+  { img: foto5, title: "Image5", author: "Admin", cols: 1, rows: 2 },
+  { img: foto11, title: "Image5", author: "Admin", cols: 1, rows: 2 },
+  { img: foto12, title: "Image5", author: "Admin", cols: 1, rows: 2 },
+  { title: "Випускники 2020", author: null, cols: 3, rows: 0 },
+  { img: foto6, title: "Image6", author: "Admin", cols: 1, rows: 2 },
+  { img: foto7, title: "Image7", author: "Admin", cols: 2, rows: 2 },
+  { img: foto8, title: "Image8", author: "Admin", cols: 1, rows: 3 },
+  { img: foto9, title: "Image9", author: "Admin", cols: 1, rows: 3 },
+  { img: foto10, title: "Image10", author: "Admin", cols: 1, rows: 3 },
+
 ];
 
 // Custom Scrollbar
+
 
 export default function ImageGridList() {
   const classes = useStyles();
@@ -118,35 +127,25 @@ export default function ImageGridList() {
         className={classes.gridList}
         cols={3}
       >
+        !!!!
         <GridListTile
           key="Subheader"
           cols={2}
           style={{ height: "auto", minHeight: 40 }}
         >
-          <ListSubheader className={classes.title} component="div">
-            December
+          <ListSubheader className={classes.title} component="div" style={{ color: "#7EB3FF" }}>
+            Виховна година до дня голодомору
           </ListSubheader>
         </GridListTile>
-        {tileData.map((tile) => (
+        {tileData.map((tile, index) => (
           <GridListTile
             key={tile.img}
             cols={tile.cols || 1}
             rows={tile.rows || 1}
           >
-            <img id="gallary" tabindex="0" src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
-              actionIcon={
-                <IconButton
-                  aria-label={`info about ${tile.title}`}
-                  className={classes.icon}
-                  id="icon"
-                >
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
+            <img id="gallary" tabindex="0" src={tile.img} />
+            {(index === 3) ? (<GridListTileBar title={<h2 style={{ color: "#7EB3FF" }}>{tile.title}</h2>} />) :
+              (index === 8) ? (<GridListTileBar title={<h2 style={{ color: "#7EB3FF" }}>{tile.title}</h2>} />) : (null)}
           </GridListTile>
         ))}
       </GridList>

@@ -38,13 +38,9 @@ export default function CardBlockNewsInfo({ img, descOne, descTwo }) {
   return (
     <div>
       <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
         spacing={3}
       >
-        <Grid item xs={8} sm={8} md={8} lg={8}>
+        <Grid item >
           <Paper
             className={classes.paper}
             style={{ border: "none" }}

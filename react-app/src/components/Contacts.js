@@ -20,13 +20,15 @@ export default function Contact() {
                                 frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-
-                        </div>
-                    </div>
                 </div>
             </section>
+            <div className="novisible">
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

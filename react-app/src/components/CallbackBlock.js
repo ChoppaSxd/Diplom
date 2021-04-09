@@ -8,6 +8,7 @@ import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import PhoneFoto from "../images/pngtree-phone-icon-png-image_1757859.jpg";
 import Vector12 from "../images/Vector (12).png";
+import Vector11 from "../images/Vector11.jpg";
 import { CircularProgress } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -139,7 +140,7 @@ export default function CallbackBlock() {
         <div className="popover" id="menus">
           <div className="contents">
             <a onClick={enableScrolling} href="#" class="close"></a>
-            <h2>Зв'язатися з нами</h2>
+            <h2>Написати відгук</h2>
             {loading ? (
               <Formik
                 initialValues={{

@@ -12,7 +12,7 @@ import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: 716,
+    minHeight: 745,
     height: "100%",
     cursor: "pointer",
   },
@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   textspacing: { margin: theme.spacing(1) },
+  textspacingTitle: { padding: theme.spacing(1) },
 }));
 
 export default function NewsBlock({ img, desc, data, title }) {
@@ -48,7 +49,7 @@ export default function NewsBlock({ img, desc, data, title }) {
         />
         <br />
         <br />
-        <h1 style={{ textAlign: "start", fontSize: 18, fontWeight: 700 }}>
+        <h1 className={classes.textspacingTitle} style={{ textAlign: "start", fontSize: 18, fontWeight: 700 }}>
           {title}
         </h1>
         <Divider />
