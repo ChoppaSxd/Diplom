@@ -37,44 +37,27 @@ export default function CardBlockNewsInfo({ img, descOne, descTwo }) {
 
   return (
     <div>
-      <Grid
-        spacing={3}
-      >
-        <Grid item >
+      <Grid spacing={3}>
+        <Grid item>
           <Paper
             className={classes.paper}
             style={{ border: "none" }}
             variant="outlined"
           >
-            <img src={img.img1} height="100%" width="100%" />
-            <br />
-            <br />
-            <Divider />
-            <Divider />
-            <Divider />
             <p style={{ fontSize: 18 }}>{descOne}</p>
             <Divider />
             <Divider />
             <Divider />
             <br />
             <br />
-            <img src={img.img2} height="100%" width="100%" />
-            <br />
-            <br />
-            <img src={img.img3} height="100%" width="100%" />
-            <img
-              style={{ paddingTop: 10 }}
-              src={img.img4}
-              height="100%"
-              width="100%"
-            />
+            <img src={img} height="100%" width="100%" />
             <br />
             <br />
             <Divider />
             <Divider />
             <Divider />
             <p style={{ fontSize: 18 }}>{descTwo}</p>
-            <Link to="/main" style={{ textDecoration: "none" }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <Button
                 variant="outlined"
                 color="primary"

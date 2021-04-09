@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CardBlockNewsInfo from "./CardBlockNewsInfo";
+import { CircularProgress } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,6 +16,11 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 80,
     background: "#000000",
     color: "#ffffff",
+  },
+  loadcss: {
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 }));
 
@@ -75,19 +81,41 @@ const cardData = [
 
 export default function NewsInfo() {
   const classes = useStyles();
+  const [info, setInfo] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(async () => {
+    const response = await fetch("https://lfkkn.herokuapp.com/novynies", {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+    setInfo(data);
+    setLoading(true);
+    //console.log(infores.name);
+  }, []);
 
   return (
     <div>
       <div className={classes.blockAboutUs}>
         <div className="container">
-          {cardData.map((item) => (
-            <CardBlockNewsInfo
-              key={item.id}
-              img={item.img}
-              descOne={item.descOne}
-              descTwo={item.descTwo}
-            />
-          ))}
+          {loading ? (
+            info.map((item) => (
+              <CardBlockNewsInfo
+                key={item.id}
+                img={item.imageURL}
+                descOne={item.title}
+                descTwo={item.description}
+              />
+            ))
+          ) : (
+            <div className={classes.loadcss}>
+              <CircularProgress color="secondary" />
+            </div>
+          )}
         </div>
       </div>
     </div>

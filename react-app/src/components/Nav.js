@@ -17,7 +17,7 @@ export default function Navbars() {
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
         <Container>
           <Navbar.Brand href="#home">
-            <Link onClick={NewsScreenOne} to="/main" className="logos">
+            <Link onClick={NewsScreenOne} to="/" className="logos">
               Циклова комісія інформатики
             </Link>
           </Navbar.Brand>
@@ -25,7 +25,7 @@ export default function Navbars() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="#home" className="d-flex">
-                <Link onClick={NewsScreenOne} to="/main" href="#">
+                <Link onClick={NewsScreenOne} to="/" href="#">
                   <Button
                     className="btn-hover-navs color-1"
                     variant="outline-dark"

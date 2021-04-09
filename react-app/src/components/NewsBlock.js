@@ -49,7 +49,10 @@ export default function NewsBlock({ img, desc, data, title }) {
         />
         <br />
         <br />
-        <h1 className={classes.textspacingTitle} style={{ textAlign: "start", fontSize: 18, fontWeight: 700 }}>
+        <h1
+          className={classes.textspacingTitle}
+          style={{ textAlign: "start", fontSize: 18, fontWeight: 700 }}
+        >
           {title}
         </h1>
         <Divider />

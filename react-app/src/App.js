@@ -25,7 +25,7 @@ function App() {
         <Links />
         <CallbackBlock />
         <Switch>
-          <Route exact path="/main" component={Main} />
+          <Route exact path="/" component={Main} />
           <Route exact path="/info" component={Info} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/fotogalery" component={Fotogalery} />

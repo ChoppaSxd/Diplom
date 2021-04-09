@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../components/Main.css";
@@ -8,6 +8,7 @@ import NewsBlock from "../components/NewsBlock";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import foto from "../images/ldk.jpg";
+import { CircularProgress } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +29,11 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   textspacing: { padding: theme.spacing(1) },
+  loadcss: {
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
 }));
 
 const eventData = [
@@ -70,10 +76,26 @@ const eventData = [
 
 export default function Main() {
   const classes = useStyles();
+  const [info, setInfo] = useState([]);
+  const [loading, setloading] = useState(false);
 
   const NewsScreenOne = () => {
     window.scrollTo(0, 100);
   };
+
+  useEffect(async () => {
+    const response = await fetch("https://lfkkn.herokuapp.com/novynies", {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+    setInfo(data);
+    setloading(true);
+    //console.log(infores.name);
+  }, []);
 
   return (
     <div className="Main">
@@ -96,10 +118,11 @@ export default function Main() {
                   </div>
                   <div className="face face2">
                     <div className="content">
-                      <p>
-                        Електронна біоліотека
-                      </p>
-                      <Nav.Link target="_blank" href="http://www.elib-lcnuht.lviv.ua/">
+                      <p>Електронна біоліотека</p>
+                      <Nav.Link
+                        target="_blank"
+                        href="http://www.elib-lcnuht.lviv.ua/"
+                      >
                         Перейти
                       </Nav.Link>
                     </div>
@@ -137,10 +160,11 @@ export default function Main() {
                   </div>
                   <div className="face face2">
                     <div className="content">
-                      <p>
-                        Основи програмування курси
-                      </p>
-                      <Nav.Link target="_blank" href="https://courses.prometheus.org.ua/courses/KPI/Programming101/2015_T1/about">
+                      <p>Основи програмування курси</p>
+                      <Nav.Link
+                        target="_blank"
+                        href="https://courses.prometheus.org.ua/courses/KPI/Programming101/2015_T1/about"
+                      >
                         Перейти
                       </Nav.Link>
                     </div>
@@ -157,9 +181,7 @@ export default function Main() {
                   </div>
                   <div className="face face2">
                     <div className="content">
-                      <p>
-                        Головний сайт коледжу
-                      </p>
+                      <p>Головний сайт коледжу</p>
                       <Nav.Link target="_blank" href="http://lfkhp.com.ua/">
                         Перейти
                       </Nav.Link>
@@ -173,23 +195,29 @@ export default function Main() {
         <div className="block_about_us">
           <div className="container">
             <Grid container direction="row" spacing={3}>
-              {eventData.map((item) => (
-                <Grid item xs={12} sm={12} md={6} lg={6}>
-                  <Link
-                    className="link"
-                    onClick={NewsScreenOne}
-                    key={item.id}
-                    to={`/newsinfo`}
-                  >
-                    <NewsBlock
-                      img={item.img}
-                      title={item.title}
-                      desc={item.desc}
-                      data={item.data}
-                    />
-                  </Link>
-                </Grid>
-              ))}
+              {loading ? (
+                info.map((item) => (
+                  <Grid item xs={12} sm={12} md={6} lg={6}>
+                    <Link
+                      className="link"
+                      onClick={NewsScreenOne}
+                      key={item.id}
+                      to={`/newsinfo`}
+                    >
+                      <NewsBlock
+                        img={item.imageURL}
+                        title={item.title}
+                        desc={item.description}
+                        data={item.date}
+                      />
+                    </Link>
+                  </Grid>
+                ))
+              ) : (
+                <div className={classes.loadcss}>
+                  <CircularProgress color="secondary" />
+                </div>
+              )}
             </Grid>
           </div>
         </div>
